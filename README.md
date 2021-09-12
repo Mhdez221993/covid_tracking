@@ -2,7 +2,7 @@
 # covid-19-tracking
 The Covid-19 Tracking Project collects information from different data sources to provide comprehensive data for the novel coronavirus, SARS-CoV-2.
 
-![screeshoot]()
+![screeshoot](https://github.com/microverseinc/curriculum-react-redux/blob/main/capstone/images/metrics_app.png)
 
 ## Built With
 - JavaScript

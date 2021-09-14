@@ -8,7 +8,7 @@ const filterEuContries = obj => {
     'Greece', 'Portugal', 'Sweden', 'Hungary', 'Holy See',
     'Belarus', 'Austria', 'Serbia', 'Switzerland',
     'Bulgaria', 'Denmark', 'Finland', 'Slovakia',
-    'Norway', 'Ireland', 'Croatia', 'Moldova', 'Bosnia',
+    'Norway', 'Ireland', 'Croatia', 'Moldova', 'Bosnia and Herzegovina',
     'Albania', 'Lithuania', 'North Macedonia', 'Slovenia',
     'Latvia', 'Estonia', 'Montenegro', 'Luxembourg',
     'Andorra', 'Monaco', 'Liechtenstein', 'San Marino',

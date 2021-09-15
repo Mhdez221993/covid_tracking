@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Switch,
   Route,
@@ -8,16 +8,23 @@ import Country from './components/Country';
 import Nav from './components/Nav';
 
 function App() {
+  const [cities, setCities] = useState([]);
+  const [country, setCityName] = useState('');
+  const handleCity = (country, categories) => {
+    setCities(categories);
+    setCityName(country);
+  };
+
   return (
     <div className="App">
       <div className="main">
         <Nav />
         <Switch>
           <Route exact path="/">
-            <Country />
+            <Country handleCity={handleCity} />
           </Route>
           <Route exact path="/city">
-            <City />
+            <City cities={cities} country={country} />
           </Route>
         </Switch>
       </div>

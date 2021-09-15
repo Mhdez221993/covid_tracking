@@ -1,6 +1,7 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 # covid-19-tracking
 The Covid-19 Tracking Project collects information from different data sources to provide comprehensive data for the novel coronavirus, SARS-CoV-2.
+This React capstone project (remember what are they?)is about building a mobile web application to check a list of metrics (numeric values) that you will create making use of React and Redux.
 
 ![screeshoot](https://github.com/microverseinc/curriculum-react-redux/blob/main/capstone/images/metrics_app.png)
 

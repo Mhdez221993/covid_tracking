@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { FiArrowRightCircle } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 import { loadCities } from '../redux/countries/country';
 import europe from '../assess/europe.png';
 
-const Country = () => {
+const Country = props => {
   const dispatch = useDispatch();
   const contries = useSelector(store => store.state);
 
@@ -22,7 +24,7 @@ const Country = () => {
           <img src={europe} alt="europe" />
         </div>
         <div className="europ-description">
-          <p className="p-euro">EUROPE</p>
+          <p className="p-euro title-country">EUROPE</p>
           {
           contries.reduce((a, b) => a + b.today_confirmed, 0)
           }
@@ -31,17 +33,23 @@ const Country = () => {
       <ul className="country-wrapper">
         {contries.map(v => (
           <li key={v.id} className="country-item">
-            <FiArrowRightCircle className="arrow-right" />
+            <NavLink to="/city" exact>
+              <FiArrowRightCircle className="arrow-right" onClick={() => props.handleCity(v.name, v.regions)} />
+            </NavLink>
             <div>
-              <span>{v.name}</span>
+              <span className="title-country">{v.name}</span>
               <br />
-              <span>{v.today_confirmed}</span>
+              <span className="title-number">{v.today_confirmed}</span>
             </div>
           </li>
         ))}
       </ul>
     </div>
   );
+};
+
+Country.propTypes = {
+  handleCity: PropTypes.func.isRequired,
 };
 
 export default Country;

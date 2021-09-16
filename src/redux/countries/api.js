@@ -1,36 +1,13 @@
-const utc = new Date().toJSON().slice(0, 10);
-const BASE_URL = `https://api.covid19tracking.narrativa.com/api/${utc}`;
+const API_BASE = 'https://covid-api.mmediagroup.fr/v1/cases';
 
-const filterEuContries = obj => {
-  const countries = ['Germany', 'United Kingdom',
-    'France', 'Italy', 'Spain',
-    'Romania', 'Netherlands', 'Belgium', 'Czechia',
-    'Greece', 'Portugal', 'Sweden', 'Hungary', 'Holy See',
-    'Belarus', 'Austria', 'Serbia', 'Switzerland',
-    'Bulgaria', 'Denmark', 'Finland', 'Slovakia',
-    'Norway', 'Ireland', 'Croatia', 'Moldova', 'Bosnia and Herzegovina',
-    'Albania', 'Lithuania', 'North Macedonia', 'Slovenia',
-    'Latvia', 'Estonia', 'Montenegro', 'Luxembourg',
-    'Andorra', 'Monaco', 'Liechtenstein', 'San Marino', 'Russia', 'Ukraine',
-    'Poland',
-  ];
+export const getCountries = async continent => {
+  const response = await fetch(`${API_BASE}?continent=${continent}`);
 
-  const europe = countries.map(country => obj[country]);
-
-  return europe;
+  return response.json();
 };
 
-const getContries = async () => {
-  const response = await fetch(`${BASE_URL}`);
-  try {
-    const contries = await response.json();
+export const getCountry = async name => {
+  const response = await fetch(`${API_BASE}?country=${name}`);
 
-    const { dates: { [utc]: { countries } } } = contries;
-
-    return filterEuContries(countries);
-  } catch (error) {
-    return {};
-  }
+  return response.json();
 };
-
-export default getContries;

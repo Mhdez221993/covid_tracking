@@ -1,34 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
-import City from './components/City';
-import Country from './components/Country';
+import Details from './components/City';
+import Home from './components/Country';
 import Nav from './components/Nav';
 
-function App() {
-  const [cities, setCities] = useState([]);
-  const [country, setCityName] = useState('');
-  const handleCity = (country, categories) => {
-    setCities(categories);
-    setCityName(country);
-  };
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+  },
+  {
+    path: '/country/:name',
+    name: 'Details',
+    component: Details,
+  },
+];
 
-  return (
-    <Router>
-      <Nav />
-      <Switch>
-        <Route exact path="/">
-          <Country handleCity={handleCity} />
-        </Route>
-        <Route exact path="/city">
-          <City cities={cities} country={country} />
-        </Route>
-      </Switch>
-    </Router>
-  );
-}
+const App = () => (
+  <Router>
+    <Nav />
+    <Switch>
+      {routes.map(({ path, component }) => (
+        <Route key={path} exact path={path} component={component} />
+      ))}
+    </Switch>
+  </Router>
+);
 
 export default App;

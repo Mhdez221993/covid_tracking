@@ -1,11 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
 import { FiArrowRightCircle } from 'react-icons/fi';
+import { fetchCountry } from '../redux/countries/country';
 import europe from '../assess/europe.png';
 
-const City = props => {
-  const { cities, country } = props;
+const City = () => {
+  const dispatch = useDispatch();
+  const { name } = useParams();
+  const { country } = useSelector(state => ({
+    country: state.countries.selected,
+  }));
+
+  useEffect(
+    () => {
+      dispatch(fetchCountry(name));
+      console.log(country);
+    },
+    [],
+  );
+
+  if (!country) {
+    return null;
+  }
+
+  const { All } = country;
+  const list = Object.entries(country).slice(1);
   return (
     <div className="wrapper">
       <div className="euro-wrapper">
@@ -13,17 +33,15 @@ const City = props => {
           <img src={europe} alt="europe" />
         </div>
         <div className="europ-description">
-          <p className="p-euro title-country">{country}</p>
-          {
-          cities.reduce((a, b) => a + b.today_confirmed, 0)
-          }
+          <p className="p-euro title-country">{All.country}</p>
         </div>
       </div>
+      <h5 className="city-section">CITY/TOWN BREAKDOWN - 2021</h5>
       <ul className="city-wrapper">
-        {cities.map(v => (
-          <li key={v.id} className="city-item">
-            <span className="title-country">{v.name}</span>
-            <span className="city-number">{v.today_confirmed}</span>
+        {list.map(([name, {confirmed}]) => (
+          <li key={name} className="city-item">
+            <span className="title-country">{name}</span>
+            <span className="city-number">{confirmed}</span>
             <Link to="/" exact>
               <FiArrowRightCircle className="arrow-right" />
             </Link>
@@ -32,11 +50,6 @@ const City = props => {
       </ul>
     </div>
   );
-};
-
-City.propTypes = {
-  cities: PropTypes.arrayOf(PropTypes.object).isRequired,
-  country: PropTypes.string.isRequired,
 };
 
 export default City;

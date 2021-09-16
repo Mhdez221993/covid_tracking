@@ -124,3 +124,10 @@ li.city-item:nth-child(even){
 .city-number {
  margin: 0 auto;
 }
+
+.city-section {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #df4782;
+}

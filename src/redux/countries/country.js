@@ -47,7 +47,7 @@ const reducer = (state = initialState, action) => {
     case LOAD_COUNTRIES:
       return action.payload;
     case LOAD_COUNTRY:
-      return {...state, selected: action.payload };
+      return { ...state, selected: action.payload };
     default:
       return state;
   }

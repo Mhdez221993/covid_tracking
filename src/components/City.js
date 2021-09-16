@@ -15,7 +15,6 @@ const City = () => {
   useEffect(
     () => {
       dispatch(fetchCountry(name));
-      console.log(country);
     },
     [],
   );
@@ -38,7 +37,7 @@ const City = () => {
       </div>
       <h5 className="city-section">CITY/TOWN BREAKDOWN - 2021</h5>
       <ul className="city-wrapper">
-        {list.map(([name, {confirmed}]) => (
+        {list.map(([name, { confirmed }]) => (
           <li key={name} className="city-item">
             <span className="title-country">{name}</span>
             <span className="city-number">{confirmed}</span>

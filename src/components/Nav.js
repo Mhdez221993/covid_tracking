@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io';
 import { BsFillMicFill } from 'react-icons/bs';
 import { FiSettings } from 'react-icons/fi';
@@ -7,9 +7,9 @@ import { FiSettings } from 'react-icons/fi';
 const Nav = () => (
   <nav className="navBar">
     <div className="back">
-      <NavLink to="/" exact>
+      <Link to="/" exact>
         <IoIosArrowBack className="back-arrow" />
-      </NavLink>
+      </Link>
       <span className="date">{new Date().toJSON().slice(0, 4)}</span>
     </div>
     <span className="all-cases">Cases in Europe</span>

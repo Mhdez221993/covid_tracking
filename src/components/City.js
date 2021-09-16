@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import europe from '../assess/europe.png';
 
@@ -24,9 +24,9 @@ const City = props => {
           <li key={v.id} className="city-item">
             <span className="title-country">{v.name}</span>
             <span className="city-number">{v.today_confirmed}</span>
-            <NavLink to="/" exact>
+            <Link to="/" exact>
               <FiArrowRightCircle className="arrow-right" />
-            </NavLink>
+            </Link>
           </li>
         ))}
       </ul>

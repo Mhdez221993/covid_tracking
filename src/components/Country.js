@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import PropTypes from 'prop-types';
@@ -13,6 +13,7 @@ const Country = props => {
   useEffect(
     () => {
       if (contries.length === 0) dispatch(loadCities());
+      console.log(contries);
     },
     [],
   );
@@ -33,9 +34,9 @@ const Country = props => {
       <ul className="country-wrapper">
         {contries.map(v => (
           <li key={v.id} className="country-item">
-            <NavLink to="/city" exact>
+            <Link to="/city" exact>
               <FiArrowRightCircle className="arrow-right" onClick={() => props.handleCity(v.name, v.regions)} />
-            </NavLink>
+            </Link>
             <div>
               <span className="title-country">{v.name}</span>
               <br />

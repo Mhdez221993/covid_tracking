@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
@@ -16,19 +17,17 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="main">
-        <Nav />
-        <Switch>
-          <Route exact path="/">
-            <Country handleCity={handleCity} />
-          </Route>
-          <Route exact path="/city">
-            <City cities={cities} country={country} />
-          </Route>
-        </Switch>
-      </div>
-    </div>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact path="/">
+          <Country handleCity={handleCity} />
+        </Route>
+        <Route exact path="/city">
+          <City cities={cities} country={country} />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

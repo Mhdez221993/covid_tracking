@@ -2,6 +2,7 @@
   "name": "covid-19-tracking",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://git.heroku.com/mh-react-capstone-project.git",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",

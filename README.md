@@ -5,6 +5,8 @@ The Covid-19 Tracking Project collects information from different data sources t
 
 ![screeshoot](https://github.com/microverseinc/curriculum-react-redux/blob/main/capstone/images/metrics_app.png)
 
+[Live-heroku](https://mh-react-capstone-project.herokuapp.com/)
+
 [Loom](https://www.loom.com/share/0ea9c83e7428483d831dc76cc58ec023)
 
 

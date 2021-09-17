@@ -2,7 +2,9 @@
   "name": "covid-19-tracking",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://git.heroku.com/mh-react-capstone-project.git",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -10,13 +12,14 @@
     "bootstrap": "^5.1.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-markdown": "^2.2.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.6",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.1",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "redux": "^4.1.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
@@ -27,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,16 +52,17 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.11.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^2.5.1",
-    "stylelint": "^13.3.3",
-    "stylelint-config-standard": "^20.0.0",
+    "babel-eslint": "10.1.x",
+    "eslint": "7.11.x",
+    "eslint-config-airbnb": "18.1.x",
+    "eslint-plugin-import": "2.22.x",
+    "eslint-plugin-jsx-a11y": "6.2.x",
+    "eslint-plugin-react": "7.20.x",
+    "eslint-plugin-react-hooks": "2.5.x",
+    "msw": "^0.35.0",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.17.2"
+    "stylelint-scss": "3.17.x"
   }
 }

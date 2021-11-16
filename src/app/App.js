@@ -5,6 +5,7 @@ import {
 import Cities from '../features/cities/Cities';
 import Countries from '../features/countries/Countries';
 import Nav from '../features/Nav/Nav';
+import './app.css';
 
 const routes = [
   {

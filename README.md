@@ -1,7 +1,8 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
-# covid-19-tracking
-The Covid-19 Tracking Project collects information from different data sources to provide comprehensive data for the novel coronavirus, SARS-CoV-2.
 
+# covid-19-tracking
+
+The Covid-19 Tracking Project collects information from different data sources to provide comprehensive data for the novel coronavirus, SARS-CoV-2.
 
 ![screeshoot](https://github.com/microverseinc/curriculum-react-redux/blob/main/capstone/images/metrics_app.png)
 
@@ -9,16 +10,11 @@ The Covid-19 Tracking Project collects information from different data sources t
 
 [Loom](https://www.loom.com/share/0ea9c83e7428483d831dc76cc58ec023)
 
-
 ## Built With
-- JavaScript
+
 - React
 - Redux
-- Webpack
-- HTML/SCSS
-- Node.JS
 - Jest
-
 
 ## Getting Started
 
@@ -31,9 +27,7 @@ npm start
 
 ## Available Scripts
 
-
 In the project directory, you can run:
-
 
 ### `npm test`
 
@@ -56,7 +50,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
@@ -69,6 +62,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 npx eslint .
 npx stylelint "**/*.{css,scss}"
 ```
+
 - Autofix linters errors
 
 ```cmd
@@ -90,8 +84,6 @@ npm install --save-dev stylelint@13.3.x stylelint-scss@3.17.x stylelint-config-s
 - Twitter: [@MoisesH42060050](https://twitter.com/MoisesH42060050)
 - LinkedIn: [Moises Hernandez Coronado](https://www.linkedin.com/in/moises-hernandez-9bbb17145/)
 
-
-
 =======
 
 ## 🤝 Contributing
@@ -109,7 +101,7 @@ Give a ⭐️ if you like this project!
 =======
 
 ## Acknowledgments
+
 - Microverse for giving me this chance
 - To my Stand Up Team and coding partners who kept my morale up!
 - The amazing code reviewers for making me improve every day :thumbsup:
-

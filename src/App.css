@@ -1,129 +1,39 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+.App {
+  text-align: center;
 }
 
-body {
-  background-color: #fc4f91;
-  color: #f8e0e9;
-  font-family: Arial, Helvetica, sans-serif;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-img {
-  width: 100%;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.navBar {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: #d14278;
-}
-
-.all-cases {
-  margin: 0 auto;
-  font-size: 20px;
-  font-weight: 100;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.setting {
-  margin-left: 20px;
-}
-
-.back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.back-arrow {
-  font-size: 20px;
-  color: inherit;
-  color: #f8e0e9;
-}
-
-.euro-wrapper {
-  display: flex;
-}
-
-.euro-map {
-  flex: 1;
-}
-
-.europ-description {
-  flex: 1;
-  font-size: 20px;
-  padding-left: 30px;
-}
-
-.country-item {
-  min-height: 140px;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 10px 10px 0 0;
-  background-color: #df4782;
-}
-
-li.country-item:nth-child(4n+2),
-li.country-item:nth-child(4n+3) {
-  background-color: #d14278;
-}
-
-.country-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-
-.arrow-right {
-  font-size: 22px;
-  color: #f8e0e9;
-}
-
-.title-country {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.p-euro {
-  margin-top: 50px;
-  font-size: 25px;
-}
-
-.city-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-}
-
-.city-item {
-  min-height: 90px;
-  display: grid;
-  grid-template-columns: 1fr 80px 30px;
-  padding: 10px;
   align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-li.city-item:nth-child(odd) {
-  background-color: #d14278;
+.App-link {
+  color: #61dafb;
 }
 
-li.city-item:nth-child(even) {
-  background-color: #df4782;
-}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
 
-.city-number {
-  margin: 0 auto;
-}
-
-.city-section {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: #df4782;
+  to {
+    transform: rotate(360deg);
+  }
 }

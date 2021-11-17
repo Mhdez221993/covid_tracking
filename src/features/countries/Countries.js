@@ -8,9 +8,7 @@ import europe from './europe.png';
 
 const Countries = () => {
   const dispatch = useDispatch();
-  const { items, totalConfirmed } = useSelector(state => ({
-    ...state.countries,
-  }));
+  const { items, totalConfirmed } = useSelector(state => state.continent);
 
   useEffect(
     () => {
@@ -18,6 +16,8 @@ const Countries = () => {
     },
     [],
   );
+
+  const list = items.sort((a, b) => b.confirmed - a.confirmed);
 
   return (
     <div className="wrapper">
@@ -31,15 +31,15 @@ const Countries = () => {
         </div>
       </div>
       <ul className="country-wrapper">
-        {items.map(v => (
-          <li key={v.name} className="country-item">
-            <Link to={`/country/${v.name}`} exact>
+        {list.map(({ country, confirmed }) => (
+          <li key={country} className="country-item">
+            <Link to={`/country/${country}`} exact="true">
               <FiArrowRightCircle className="arrow-right" />
             </Link>
             <div>
-              <span className="title-country">{v.name}</span>
+              <span className="title-country">{country}</span>
               <br />
-              <span className="title-number">{v.confirmed}</span>
+              <span className="title-number">{confirmed}</span>
             </div>
           </li>
         ))}

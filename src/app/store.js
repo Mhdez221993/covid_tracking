@@ -1,10 +1,12 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import countriesReducer from '../features/countries/countriesReducer';
+import country from '../features/cities/citiesReducer';
+import continent from '../features/countries/countriesReducer';
 
 const reducer = combineReducers({
-  countries: countriesReducer,
+  continent,
+  country,
   // additional reducers could be added here
 });
 

@@ -1,22 +1,22 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Route, Routes,
+  BrowserRouter as Router, Route, Routes
 } from 'react-router-dom';
-import Cities from '../features/cities/Cities';
-import Countries from '../features/countries/Countries';
+import Continent from '../features/continent/Continent';
+import Country from '../features/country/Country';
 import Nav from '../features/Nav/Nav';
 import './app.css';
 
 const routes = [
   {
     path: '/',
-    name: 'Countries',
-    component: <Countries />,
+    name: 'Continent',
+    component: <Continent />,
   },
   {
     path: '/country/:name',
-    name: 'Cities',
-    component: <Cities />,
+    name: 'Country',
+    component: <Country />,
   },
 ];
 

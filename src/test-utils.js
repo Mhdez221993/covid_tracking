@@ -1,4 +1,5 @@
 import { render as rtlRender } from '@testing-library/react';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
@@ -33,10 +34,14 @@ function testRender(
     ...renderOptions
   } = {},
 ) {
-  // eslint-disable-next-line react/prop-types
   function Wrapper({ children }) {
     return <Provider store={store}>{children}</Provider>;
   }
+
+  Wrapper.propTypes = {
+    children: PropTypes.node.isRequired,
+  };
+
   return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
 }
 

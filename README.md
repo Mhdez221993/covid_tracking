@@ -8,7 +8,7 @@ The Covid-19 Tracking Project collects information from different data sources t
 
 [Live-heroku](https://mh-react-capstone-project.herokuapp.com/)
 
-[Loom](https://www.loom.com/share/0ea9c83e7428483d831dc76cc58ec023)
+[Loom](https://www.loom.com/share/5526900826234aee9d7140920ba982b2)
 
 ## Built With
 
@@ -102,6 +102,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse for giving me this chance
-- To my Stand Up Team and coding partners who kept my morale up!
-- The amazing code reviewers for making me improve every day :thumbsup:
+- Microverse
+- Original design idea by [Nelson Sakwa on Behance](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>)
+- Powered by [Covid-19-API](https://github.com/M-Media-Group/Covid-19-API)

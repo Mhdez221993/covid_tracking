@@ -1,0 +1,69 @@
+.euro-wrapper {
+  display: flex;
+  max-height: 500px;
+}
+
+.euro-map {
+  flex: 1;
+}
+
+.europ-description {
+  flex: 1;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.country-item {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 10px 0 0;
+  background-color: #df4782;
+}
+
+li.country-item:nth-child(4n + 2),
+li.country-item:nth-child(4n + 3) {
+  background-color: #d14278;
+}
+
+.country-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  flex-grow: 1;
+}
+
+.arrow-right {
+  font-size: 22px;
+  color: #f8e0e9;
+}
+
+.title-country {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.p-euro {
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+::placeholder {
+  color: #f8e0e9;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.filter {
+  width: 100%;
+  border: 1px solid #c54375;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #f8e0e9;
+  font-size: 22px;
+  font-weight: 500;
+  outline: none;
+  background-color: #c34072;
+}

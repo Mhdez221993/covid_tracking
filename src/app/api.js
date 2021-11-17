@@ -1,6 +1,6 @@
 const API_BASE = 'https://covid-api.mmediagroup.fr/v1/cases';
 
-export const getCountries = async continent => {
+export const getContinent = async continent => {
   const response = await fetch(`${API_BASE}?continent=${continent}`);
 
   return response.json();

@@ -35,6 +35,6 @@ describe('App component without API call', () => {
   test('Shour render Spain not in the document', () => {
     testRender(<App />);
     const linkElement = screen.queryByText('Spain');
-    expect(linkElement).not.toBeInTheDocument();
+    expect(linkElement).not.toBe();
   });
 });

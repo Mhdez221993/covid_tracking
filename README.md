@@ -8,7 +8,7 @@ The Covid-19 Tracking Project collects information from different data sources t
 
 [Live-heroku](https://mh-react-capstone-project.herokuapp.com/)
 
-[Loom](https://www.loom.com/share/0ea9c83e7428483d831dc76cc58ec023)
+[Loom](https://www.loom.com/share/5526900826234aee9d7140920ba982b2)
 
 ## Built With
 

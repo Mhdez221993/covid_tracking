@@ -1,0 +1,32 @@
+.city-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.city-item {
+  min-height: 90px;
+  display: grid;
+  grid-template-columns: 1fr 80px 30px;
+  padding: 10px;
+  align-items: center;
+}
+
+li.city-item:nth-child(odd) {
+  background-color: #d14278;
+}
+
+li.city-item:nth-child(even) {
+  background-color: #df4782;
+}
+
+.city-number {
+  margin: 0 auto;
+}
+
+.city-section {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #df4782;
+}

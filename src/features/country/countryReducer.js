@@ -1,4 +1,4 @@
-import * as API from '../../app/api';
+import { getCountry } from '../../app/api';
 
 const SET_COUNTRY = 'countries/country/SET_COUNTRY';
 const initialState = [];
@@ -9,7 +9,7 @@ export const setCountry = payload => ({
 });
 
 export const fetchCountry = name => async dispatch => {
-  const data = await API.getCountry(name);
+  const data = await getCountry(name);
 
   if (data) {
     const list = Object.entries(data).slice(1);

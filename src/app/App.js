@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Route, Routes
+  BrowserRouter as Router, Route, Routes,
 } from 'react-router-dom';
 import Continent from '../features/continent/Continent';
 import Country from '../features/country/Country';

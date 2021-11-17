@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -9,15 +9,31 @@ import europe from './europe.png';
 const Countries = () => {
   const dispatch = useDispatch();
   const { items, totalConfirmed } = useSelector(state => state.continent);
+  const [searchList, setSearch] = useState([]);
+  const [isSearching, setSearching] = useState(false);
 
   useEffect(
     () => {
       if (!items.length) dispatch(fetchCountries('europe'));
     },
-    [],
+    [searchList],
   );
 
+  const handleSearch = searchString => {
+    if (!searchString.length) {
+      setSearch([]);
+      setSearching(false);
+    } else {
+      setSearching(true);
+      const curr = items.filter(v => v.country[0].toLowerCase() === searchString[0].toLowerCase());
+      if (searchList !== curr) {
+        setSearch([...curr]);
+      }
+    }
+  };
+
   const list = items.sort((a, b) => b.confirmed - a.confirmed);
+  const currList = isSearching ? searchList : list;
 
   return (
     <div className="wrapper">
@@ -30,8 +46,14 @@ const Countries = () => {
           {totalConfirmed}
         </div>
       </div>
+      <input
+        type="text"
+        placeholder="STATS BY COUNTRY"
+        className="filter"
+        onChange={e => handleSearch(e.target.value)}
+      />
       <ul className="country-wrapper">
-        {list.map(({ country, confirmed }) => (
+        {currList.map(({ country, confirmed }) => (
           <li key={country} className="country-item">
             <Link to={`/country/${country}`} exact="true">
               <FiArrowRightCircle className="arrow-right" />

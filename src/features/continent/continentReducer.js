@@ -6,7 +6,7 @@ const initialState = {
   items: [],
 };
 
-const setContinent = payload => ({
+export const setContinent = payload => ({
   type: SET_CONTINENT,
   payload,
 });

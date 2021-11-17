@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import './countries.css';
-import { fetchCountries } from './countriesReducer';
+import './continent.css';
+import { fetchCountries } from './continentReducer';
 import europe from './europe.png';
 
 const Countries = () => {

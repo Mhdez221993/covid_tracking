@@ -1,28 +1,28 @@
-import { getCountries } from '../../app/api';
+import { getContinent } from '../../app/api';
 
-const LOAD_COUNTRIES = 'countries/country/LOAD_COUNTRIES';
+const SET_CONTINENT = 'countries/country/SET_CONTINENT';
 const initialState = {
   totalConfirmed: 0,
   items: [],
 };
 
-export const loadCountries = payload => ({
-  type: LOAD_COUNTRIES,
+const setContinent = payload => ({
+  type: SET_CONTINENT,
   payload,
 });
 
 export const fetchCountries = name => async dispatch => {
-  const cities = await getCountries(name);
-  if (cities) {
-    Object.values(cities).forEach(({ All: { country, confirmed } }) => {
-      dispatch(loadCountries({ country, confirmed }));
+  const data = await getContinent(name);
+  if (data) {
+    Object.values(data).forEach(({ All: { country, confirmed } }) => {
+      dispatch(setContinent({ country, confirmed }));
     });
   }
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOAD_COUNTRIES:
+    case SET_CONTINENT:
       return {
         items: [...state.items, action.payload],
         totalConfirmed: state.totalConfirmed + action.payload.confirmed,

@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import europe from '../countries/europe.png';
-import './Cities.css';
-import { fetchCountry } from './citiesReducer';
+import europe from '../continent/europe.png';
+import './country.css';
+import { fetchCountry } from './countryReducer';
 
 const City = () => {
   const dispatch = useDispatch();

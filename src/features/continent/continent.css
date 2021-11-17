@@ -1,5 +1,6 @@
 .euro-wrapper {
   display: flex;
+  max-height: 500px;
 }
 
 .euro-map {
@@ -31,6 +32,7 @@ li.country-item:nth-child(4n + 3) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  flex-grow: 1;
 }
 
 .arrow-right {
@@ -46,4 +48,22 @@ li.country-item:nth-child(4n + 3) {
 .p-euro {
   margin-top: 50px;
   font-size: 25px;
+}
+
+::placeholder {
+  color: #f8e0e9;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.filter {
+  width: 100%;
+  border: 1px solid #c54375;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #f8e0e9;
+  font-size: 22px;
+  font-weight: 500;
+  outline: none;
+  background-color: #c34072;
 }

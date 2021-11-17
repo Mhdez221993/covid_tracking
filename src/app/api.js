@@ -6,7 +6,7 @@ export const getCountries = async continent => {
   return response.json();
 };
 
-export const getCities = async name => {
+export const getCountry = async name => {
   const response = await fetch(`${API_BASE}?country=${name}`);
 
   return response.json();

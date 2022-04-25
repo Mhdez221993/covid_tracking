@@ -1,6 +1,6 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
-# covid-19-tracking
+# Covid Tracking App
 
 The Covid-19 Tracking Project collects information from different data sources to provide comprehensive data for the novel coronavirus, SARS-CoV-2.
 
